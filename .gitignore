@@ -1,0 +1,4 @@
+.env
+.cache
+.hypothesis
+tests/__pycache__
