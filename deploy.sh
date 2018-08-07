@@ -12,7 +12,7 @@ log() {
 check_preconditions() {
   if [ -z "${storage_account}" ] ||
      [ -z "${storage_account_key}" ] ||
-     [ -z "${blob_container}" ||
+     [ -z "${blob_container}" ] ||
      [ -z "${python_scripts_dir}" ]; then
     log "Azure credentials not set. Cannot update storage with scripts."
     exit 1
