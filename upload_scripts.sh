@@ -1,7 +1,7 @@
-readonly storage_account="${DEPLOY_STORAGE_ACCOUNT_NAME}"
-readonly storage_account_key="${DEPLOY_STORAGE_ACCOUNT_KEY}"
-readonly blob_container="${DEPLOY_BLOB_CONTAINER}"
-readonly python_scripts_dir="${DEPLOY_PYTHON_SCRIPTS_DIR}"
+readonly storage_account="${STORAGE_ACCOUNT_NAME}"
+readonly storage_account_key="${STORAGE_ACCOUNT_KEY}"
+readonly blob_container="${BLOB_CONTAINER}"
+readonly python_scripts_dir="${PYTHON_SCRIPTS_DIR}"
 
 set -euf -o pipefail
 
