@@ -18,8 +18,8 @@
     * `STORAGE_ACCOUNT_KEY`
     * `BLOB_CONTAINER`
     * `PYTHON_SCRIPTS_DIR`
-3. Create a script to upload your python scripts to your choice of storage. For example, you can use the `upload_scripts.sh` script to upload a directory specified by `PYTHON_SCRIPTS_DIR` to `Azure Blob Storage`
-4. Create a `setup.py` script. Confirm that `setup.py` includes all dependencies neccessary in your upload script. For example, `upload_scripts.sh` uses `blobxfer` for asynchronous uploads, so this dependency is included in `setup.py`.
+3. Create a script to upload your python scripts to your choice of storage. For example, you can use the `travis/blob_upload.sh` script to upload a directory specified by `PYTHON_SCRIPTS_DIR` to `Azure Blob Storage`
+4. Create a `setup.py` script. Confirm that `setup.py` includes all dependencies neccessary in your upload script. For example, `travis/blob_upload.sh` uses `blobxfer` for asynchronous uploads, so this dependency is included in `setup.py`.
 5. Add a `script` section to your `travis.yml` and point it to your upload script:
 
    ```sh

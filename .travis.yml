@@ -5,4 +5,4 @@ install:
   - pip3 install -e .[dev]
 script:
   - pytest
-  - bash upload_scripts.sh
+  - bash travis/blob_upload.sh
