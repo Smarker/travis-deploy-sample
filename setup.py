@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name="pybatchai",
+    name="travis-deploy-sample",
     version='0.0.1',
     install_requires=[
         'blobxfer'
@@ -11,8 +11,5 @@ setup(
             'hypothesis',
             'pytest'
         ]
-    },
-    entry_points={
-        'console_scripts': ['pybatchai=pybatchai:cli']
     }
 )
