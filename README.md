@@ -12,18 +12,18 @@
 
 ## Setup
 
-1. Enable `Travis CI` in your github repository
+1. [Enable Travis CI](https://docs.travis-ci.com/user/getting-started/#to-get-started-with-travis-ci) in your github repository
 2. Set [Travis CI environment variables as repository settings](https://docs.travis-ci.com/user/environment-variables/#defining-variables-in-repository-settings)
     * `STORAGE_ACCOUNT_NAME`
     * `STORAGE_ACCOUNT_KEY`
     * `BLOB_CONTAINER`
     * `PYTHON_SCRIPTS_DIR`
-3. Add `upload_scripts.sh` to your project's root directory
-4. Confirm that your `setup.py` includes `blobxfer` as a dependency
-5. Add a `script` section to your `travis.yml`:
+3. Create a script to upload your python scripts to your choice of storage. For example, you can use the `upload_scripts.sh` script to upload a directory specified by `PYTHON_SCRIPTS_DIR` to `Azure Blob Storage`
+4. Create a `setup.py` script. Confirm that `setup.py` includes all dependencies neccessary in your upload script. For example, `upload_scripts.sh` uses `blobxfer` for asynchronous uploads, so this dependency is included in `setup.py`.
+5. Add a `script` section to your `travis.yml` and point it to your upload script:
 
    ```sh
       script:
         - pytest
-        - bash upload_scripts.sh
+        - bash <upload script>
    ```
