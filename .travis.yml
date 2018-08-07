@@ -5,4 +5,4 @@ install:
   - pip3 install -e .[dev]
 script:
   - pytest
-  - upload_scripts.sh
+  - bash upload_scripts.sh

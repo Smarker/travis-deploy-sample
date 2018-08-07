@@ -25,5 +25,5 @@
    ```sh
       script:
         - pytest
-        - upload_scripts.sh
+        - bash upload_scripts.sh
    ```
